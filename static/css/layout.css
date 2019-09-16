@@ -467,7 +467,15 @@ ul.trainer_intro > li ul li.career span{display:inline-block;font-size:15px;colo
 #gallery table td ul > li.nor_mar{margin-right:0px;}
 #gallery table td ul > li p{text-align:center;}
 #gallery table td ul > li p.img_box{width:176px;height:151px;background:#d3d3d3;margin-bottom:10px;}
-#gallery table td ul > li p.title_txt{font-size:15px;font-weight:500;color:#373737;margin-bottom:5px;}
+#gallery table td ul>li p.title_txt {
+    font-size: 15px;
+    font-weight: 500;
+    color: #373737;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 #gallery table td ul > li p.date_txt{font-size:13px;color:#8a8a8a;}
 #gallery ul.page{width:90px;height:20px;line-height:20px;margin:0 auto;}
 #gallery ul.page li{float:left;margin-right:10px;}

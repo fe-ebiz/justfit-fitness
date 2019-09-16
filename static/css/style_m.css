@@ -333,7 +333,15 @@ ul.page_List li.on_list {background:#333;color:#fff;}
 .gallery table td ul > li p{text-align:center;}
 .gallery table td ul > li p.img_box{width:100%;height:151px;background:#d3d3d3;margin-bottom:10px;}
 .gallery table td ul > li p.img_box img{width:100%;height:151px}
-.gallery table td ul > li p.title_txt{font-size:15px;font-weight:500;color:#373737;margin-bottom:5px;}
+.gallery table td ul>li p.title_txt {
+    font-size: 15px;
+    font-weight: 500;
+    color: #373737;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 .gallery table td ul > li p.date_txt{font-size:13px;color:#8a8a8a;}
 
 
