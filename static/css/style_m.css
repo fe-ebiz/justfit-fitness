@@ -299,16 +299,16 @@ ul.bulletin_board li a{font-size:14px;font-weight:400;color:#2b2b2b;}
 ul.bulletin_board li.here{background:#2b2b2b;border:1px solid #2b2b2b;}
 ul.bulletin_board li.here a {color:#fff;}
 
-table.board{width:100%;border-top:2px solid #e83735;margin-bottom:15px;}
+table.board{width:100%;border-top:2px solid #e83735;margin-bottom:15px; table-layout: fixed;}
 table.board th{height:40px;background:#f6f6f6;border:0;font-size:13px;text-align:center;font-weight:600;border-bottom:1px solid #ddd;}
 table.board td{height:35px;font-size:12px;text-align:center;border-bottom:1px solid #ddd;cursor:pointer;}
-table.board td.title_td{text-align:left;text-indent:15px;}
+table.board td.title_td{text-align:left; padding-left: 5px;}
 table.board td.board_view{padding-bottom:25px;}
 
 td.answer > span.answer_ok{display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid red;}
 
 
-ul.page_List{height:27px;margin-bottom:35px;text-align:center;}
+ul.page_List{height:27px;margin-bottom:15px;text-align:center;}
 ul.page_List li{display:inline-block;padding:0px 10px;height:27px;line-height:27px;text-align:center;vertical-align:middle;border:1px solid #ddd;margin-right:2%;cursor:pointer;}
 ul.page_List li.last_li{margin-right:0px;}
 ul.page_List li.on_list {background:#333;color:#fff;}
@@ -323,12 +323,12 @@ ul.page_List li.on_list {background:#333;color:#fff;}
 	border-top:2px solid #db1920;
 	background:#fafafa;
 	text-align:center;
-	font-size:17px;
+	font-size:14px;
 	color:#333;
 	}
 .gallery table td{padding-bottom:30px;border-bottom:none;}
 .gallery table td ul {width:100%;}
-.gallery table td ul > li{float:left;width: 46%;margin-right:3.5%;height: 250px;}
+.gallery table td ul > li{float:left;width: 47%; margin-right: 3%; height: 180px;}
 .gallery table td ul > li.nor_mar{margin-right:0px;}
 .gallery table td ul > li p{text-align:center;}
 .gallery table td ul > li p.img_box{width:100%;height:151px;background:#d3d3d3;margin-bottom:10px;}
@@ -344,14 +344,13 @@ ul.page_List li.on_list {background:#333;color:#fff;}
 }
 .gallery table td ul > li p.date_txt{font-size:13px;color:#8a8a8a;}
 
-
-table.gallery_view{width:100%;border-bottom:1px solid #ddd;}
-table.gallery_view th{height:25px;padding-top:8px;text-align:left;font-weight:500;text-indent:10px;}
+table.gallery_view{width:100%;border-bottom:1px solid #ddd; max-width: none !important;}
+table.gallery_view th{height:25px;padding-top:8px;text-align:left;font-weight:500; padding-left:5px;}
 table.gallery_view td.bg_color{
 	height:25px;
 	text-align:center;
 	text-indent:5px;
-	font-size:14px;
+	font-size:12px;
 	background:#fafafa;
 	height:35px;
 	padding:0px;
