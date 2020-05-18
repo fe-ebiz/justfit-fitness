@@ -1,114 +1,140 @@
 <html>
-<head>
-<title>모노휘트니스센터</title>
-<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-<meta http-equiv="Cache-Control" content="No-Cache"/>
-<meta http-equiv="Pragma" content="No-Cache"/>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
-<meta http-equiv="imagetoolbar" content="false"/>
-<meta name="robots" content="ALL">
-<link rel="stylesheet" href="css/reset.css" type="text/css"/>
-<link rel="stylesheet" href="css/layout.css" type="text/css"/>
-<script type="text/javascript" src="js/jwSlide.js"></script>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="js/monopalace.js?ver=2015021209545820"></script>
-<script type="text/javascript" src="js/jquery.cookie.js"></script>
+  <head>
+    <title>모노휘트니스센터</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Cache-Control" content="No-Cache"/>
+    <meta http-equiv="Pragma" content="No-Cache"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+    <meta http-equiv="imagetoolbar" content="false"/>
+    <meta name="robots" content="ALL">
+    <link rel="stylesheet" href="../static/css/reset.css" type="text/css"/>
+    <link rel="stylesheet" href="../static/css/layout.css" type="text/css"/>
+    <script type="text/javascript" src="js/jwSlide.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/monopalace.js?ver=2015021209545820"></script>
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
 
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="header_area">
+        <div id="header">
+          <h1>
+            <a href="intro.html"><img src="http://img.justfit-fitness.com/top_logo.jpg" alt="저스트핏"/></a>
+          </h1>
+          <ul id="gnb">
+            <li>
+              <a href="" alt="준비중">JUST FIT</a>
+            </li>
+            <li>
+              <a href="" alt="준비중">프로그램</a>
+            </li>
+            <li>
+              <a href="" alt="준비중">트레이너</a>
+            </li>
+            <li>
+              <a href="reservation_list.html">예약/상담</a>
+            </li>
+            <li class="end">
+              <a href="community.html">커뮤니티</a>
+            </li>
+          </ul>
+          <!--gnb 끝-->
+        </div>
+        <!--header 끝-->
+      </div>
+      <!--header_area 끝-->
+      <div class="sub_img"></div>
 
-</head>
-<body>
-<div id="wrapper">
-	<div id="header_area">
-		<div id="header">
-		<h1><a href="intro.html"><img src="img/top_logo.jpg" alt="저스트핏" /></a></h1>
-			<ul id="gnb">
-				<li><a href="" alt="준비중">JUST FIT</a></li>
-				<li><a href="" alt="준비중">프로그램</a></li>
-				<li><a href="" alt="준비중">트레이너</a></li>
-				<li><a href="reservation_list.html">예약/상담</a></li>
-				<li class="end"><a href="community.html">커뮤니티</a></li>
-			</ul><!--gnb 끝-->
-		</div><!--header 끝-->
-	</div><!--header_area 끝-->
-	<div class="sub_img"></div>
-	
+      <div id="container">
+        <!-- left 메뉴 -->
+        <div id="sub_left">
+          <p class="ttl">
+            <a href="" alt="예약/상담">JUST FIT</a>
+          </p>
+          <ul>
+            <li>
+              <a href="" title="인사말">인사말</a>
+            </li>
+            <li>
+              <a href="" title="특장점">특장점</a>
+            </li>
+            <li class="on">
+              <a href="" title="시설보기">시설보기</a>
+            </li>
+            <li>
+              <a href="" title="오시는 길">오시는 길</a>
+            </li>
+          </ul>
+        </div>
+        <!-- left 메뉴 end-->
+        <div class="contents">
+          <script type="text/javascript">
+            var val = "";
+            $(function () {
+              if (($.cookie("pid") == "soonbn" || $.cookie("pid") == "soonq") && $.cookie("pop") != "done") {
+                if (val != 'mono' || !val) {
+                  apply.on('#pop2');
+                }
+              }
 
-	
-	<div id="container">
-		<!-- left 메뉴 -->
-		<div id="sub_left">
-			<p class="ttl"><a href="" alt="예약/상담">JUST FIT</a></p>
-				<ul>	            
-				<li><a href="" title="인사말">인사말</a></li>
-				<li><a href="" title="특장점">특장점</a></li>
-				<li class="on"><a href="" title="시설보기">시설보기</a></li> 
-				<li><a href="" title="오시는 길">오시는 길</a></li> 
-			</ul>     
-		</div>	
-		<!-- left 메뉴 end-->
-		<div class="contents">
-		<script type="text/javascript">
+              /* 위치조정 */
+              if (val == "mono") {
+                var top_height = 2640;
+                var fn = 0;
+                var s = jQuery('#wrapper').height() - top_height;
+                if (fn == 0) {
+                  fn = 1;
+                  jQuery('html,body').animate({
+                    scrollTop: jQuery('#wrapper').height() - s
+                  }, 250, function () {
+                    fn = 0;
+                  });
+                }
+              } else if (val == "parking") {
+                var top_height = 3550;
+                var fn = 0;
+                var s = jQuery('#wrapper').height() - top_height;
+                if (fn == 0) {
+                  fn = 1;
+                  jQuery('html,body').animate({
+                    scrollTop: jQuery('#wrapper').height() - s
+                  }, 250, function () {
+                    fn = 0;
+                  });
+                }
+              }
+            });
+            $(window).resize(function () {
+              if (($.cookie("pid") == "soonbn" || $.cookie("pid") == "soonq") && $.cookie("pop") != "done") {
+                var a = 300;
+                var b = ($(window).width() - $("#pop2").width()) / 2;
+                var arrPageSizes = ___getPageSize();
+                $("#overlay").css({"background-color": "#000", "opacity": "0.7", "width": arrPageSizes[0], "height": arrPageSizes[1]});
+                $("#pop2").css({"top": a, "left": b, "z-index": 10});
+              }
+            });
+            /*
 		var val = "";
-		$(function(){ 
-			if(($.cookie("pid") == "soonbn" || $.cookie("pid") == "soonq") && $.cookie("pop") != "done") { 
-				if(val != 'mono' || !val) { 
-					apply.on('#pop2'); 
-				} 
-			}
-
-			/*위치조정*/
-			if(val == "mono") {
-				var top_height=2640;
-				var fn=0;
-				var s = jQuery('#wrapper').height() - top_height;
-				if (fn==0){	
-					fn=1;
-					jQuery('html,body').animate({
-						scrollTop: jQuery('#wrapper').height() - s
-					}, 250, function() {fn=0;});
-				}		
-			}else if(val == "parking") {
-				var top_height=3550;
-				var fn=0;
-				var s = jQuery('#wrapper').height() - top_height;
-				if (fn==0){	
-					fn=1;
-					jQuery('html,body').animate({
-						scrollTop: jQuery('#wrapper').height() - s
-					}, 250, function() {fn=0;});
-				}		
-			}
-		});
-		$(window).resize(function(){ 
-			if(($.cookie("pid") == "soonbn" || $.cookie("pid") == "soonq") && $.cookie("pop") != "done") { 	
-				var a = 300;
-				var b = ($(window).width() - $("#pop2").width()) / 2;
-				var arrPageSizes = ___getPageSize();
-				$("#overlay").css({"background-color":"#000", "opacity":"0.7", "width":arrPageSizes[0], "height":arrPageSizes[1]});
-				$("#pop2").css({"top": a, "left": b, "z-index": 10 });
-			}
-		});
-		/*
-		var val = "";
-		$(function(){ 
-			if($.cookie("pop") != "done") { 
-				if(val != 'mono' || !val) { 
-					apply.on('#pop2'); 
-				} 
+		$(function(){
+			if($.cookie("pop") != "done") {
+				if(val != 'mono' || !val) {
+					apply.on('#pop2');
+				}
 			}
 			if(val == "mono") {
 				var top_height=2240;
 				var fn=0;
 				var s = jQuery('#wrapper').height() - top_height;
-				if (fn==0){	
+				if (fn==0){
 					fn=1;
 					jQuery('html,body').animate({
 						scrollTop: jQuery('#wrapper').height() - s
 					}, 250, function() {fn=0;});
-				}		
+				}
 			}
 		});
-		$(window).resize(function(){ if($.cookie("pop") != "done") { 	
+		$(window).resize(function(){ if($.cookie("pop") != "done") {
 				var a = 300;
 				var b = ($(window).width() - $("#pop2").width()) / 2;
 				var arrPageSizes = ___getPageSize();
@@ -117,100 +143,124 @@
 			}});
 		*/
 
-		//----------메인 이미지 슬라이드(jwSlide) -----------//
-		$(function () {
-			slide.start();
-		});
-		</script>
-			<div class="title">
-				<h1>시설보기</h1>
-				<div class="navi"><img src="img/icon_home.jpg" alt="홈" /><img src="img/icon_arrow.jpg" alt="&gt;" />JUST FIT<img src="img/icon_arrow.jpg" alt="&gt;" />시설보기</div>
-				<div id="content-area">
-					<div class="subF">
-					<!----//   jwSlide  start  //-------------------------------------->
-						<table id="jwSlide_wrap" onmouseover="javascript:slide.img_over('over');" onmouseout="javascript:slide.img_over('out');">
-						<tr><td>
-							<div id="jwSlide_left" class="jwSlide_btn">
-								<a href="javascript:slide.prev();" class="btn_link"><img src="img/photo/slide_btn_left.jpg?ver=150212092904" class="btn" alt="이전" onmouseover="javascript:slide.btn_over('prev');" onmouseout="javascript:slide.btn_over('off');"/></a>
-							</div><!--jwSlide_left-->
-							<div id="jwSlide_center">
-								<div id="jwSlide_view" class="jwSlide_center" style="position:relative; width:620px; height:384px; padding:0px; ">
-									<img id="img_view" src="" alt="" />
-									<div id="jwSlide_title_bg" class="view_title"></div>
-									<div id="jwSlide_title" class="view_title">
-										<span id="jwSlide_title_text" style="float:left; margin-left:10px;"></span>
-										<span id="jwSlide_title_no" style="float:right; margin-right:10px;"></span>
-									</div>
-								</div><!--jwSlide_view-->
-								<table id="jwSlide_navi" class="jwSlide_center" cellspacing="0px" cellpadding="0px" >
-									<tr id="jwSlide_navi_thumb"></tr>
-									<tr id="jwSlide_navi_text"></tr>
-									<tr id="jwSlide_navi_icon"></tr>
-								</table><!--jwSlide_navi-->
-							</div><!--jwSlide_center-->
-							<div id="jwSlide_right" class="jwSlide_btn">
-								<a href="javascript:slide.next();" class="btn_link"><img src="img/photo/slide_btn_right.jpg?ver=150212092904" class="btn" alt="다음"  onmouseover="javascript:slide.btn_over('next');" onmouseout="javascript:slide.btn_over('off');"/></a>
-							</div><!--jwSlide_right-->
-						</td></tr>
-						</table><!--jwSlide_wrap-->
-					<!----//   jwSlide  end   //-------------------------------------------->
-					</div> <!-- 갤러리 끝 -->
-					<div class="subF">
-						<h3>부대시설</h3>
-						<div id="etc_box"><div class="etc_box_left">
-						<h4>넓은 주차장 확보</h4>
-						<p>차량 진출입을 원활하게 유도하는 첨단 주차시스템을 갖춘 주차타워 설계와 자주식 주차로<BR>편리한 주차를 약속합니다.</p>
-						<SPAN>- 차량번호 인식 주차관제 시스템<BR>- 주차타워 66대/자주식 주차 14대(장애인주차 2대포함)<BR></SPAN></div>
-						<div class=etc_box_right><IMG src="img/etc_01.jpg"></div>
-						</div>
-						<div id="etc_box"><div class="etc_box_left">
-						<h4>CCTV 시스템</h4>
-						<p>엘리베이터, 주차장, 현관 등 모노팰리스 내설치된 고화질 CCTV로 범죄 및 안전시스템을 강화합니다.</p>
-						<SPAN>- 엘레베이터, 주차장, 현관, 복도 CCTV 설치</SPAN></div>
-						<div class=etc_box_right><IMG src="img/etc_02.jpg"></div>
-						</div>
-						<div id="etc_box"><div class="etc_box_left">
-						<h4>교통 안내</h4>
-						<p>아산 중심부에 위치하고 있으며, 지하철 1호선 온양온천역 하차 (1번출구)후 도보 7분거리 </BR>시외버스터미널
-							도보 10분거리, 광역,간선버스노선 등 버스환승이 편리한 대중교통망으로 이루워져 있습니다.</p></BR>
-							<SPAN>- 인근 지하철역 : 온양온천역, 배방역, 신창역, 천안아산역, 천안역, 봉명역, 쌍용역, 아산역<BR>- 인근 버스터미널 : 아산시외버스터미널, 아산고속버스터미널<BR>
-							</div>
-						<div class="etc_box_right"><IMG src="img/etc_03.jpg"></div>
-						</div>
-						<DIV id=etc_box><DIV class=etc_box_left>
-							<H4>24시간 편의점</H4>
-							<P>1층에 위치하고 있는 편의점은 다양하고 풍부한 상품을 갖추고 입주자의 편리를 위하여 24시간 영업하고 있습니다. 입주자께서 모노팰리스를 이용하시는 동안 필요하신 간단한 식재료,생활용품, 음료, 현금서비스 등을 바로 모노팰리스 건물내에서 해결하실 수 있습니다.</P></DIV>
-							<DIV class=etc_box_right><IMG src="img/etc_04.jpg"></div>
-						</DIV>
-						<DIV id=etc_box style="MARGIN-BOTTOM: 100px"><DIV class=etc_box_left>
-							<H4>시카고 리얼 바베큐&백반</H4>
-							<P>1층에 위치하고 있는 시카고 리얼 바베큐&백반은 기존의 기름으로 튀겨지는 치킨에서 벗어나<BR>에어프라이어를 
-								이용해 기름없이 공기로 튀기는 치킨으로 맛과 건강을 동시에 생각하는 <BR>착한 치킨입니다.
-								또한 저렴한 가격으로 아침/점심 영양만점 착한백반을 단돈 3,500원에  
-								</DIV>
-							<DIV class=etc_box_right><IMG src="img/etc_05.jpg"></div>
-						</DIV>
-					</div>
-				</div><!-- content-area 끝-->
-			</div><!-- title 끝-->
-		</div><!-- contents 끝-->
-	</div><!-- container 끝-->
-	<div id="footer">
-		<div id="f_contents">
-			<h2><img src="img/footer_logo.jpg"  /></h2>
-			<p class="address">
-				<span class="tel">서울 강남구 테헤란로 82길 15 (디아이타워 지하 1층 저스트핏)&nbsp;&nbsp;| &nbsp;상담문의: <font class="red">070-4102-6476</font> <a href="map.html" title="오시는길"><img src="img/footer_bt.jpg"style="margin-top:-2px;margin-left:5px"></a><br>서울 강남구 대치동 942-15  디아이타워 지하 1층 저스트핏</span><br>
-			  	<br>COPYRIGHT 2017 BY JUST FIT CO.,LTD ALL RIGHTS RESERVED.<br><br>
-			</p>
-		</div><!--f_contents 끝-->
-	</div><!--footer 끝-->
-</div><!--wrapper 끝-->
-<!-- 배너 -->
-<div style="position:fixed; left:50%; top:300px; width:0px; height:0px;">
-	<div style="position:relative; left:530px; width:0px; height:0px;">
-		<a href="#"><img src="img/wing_bn01.gif" /></a>
-		<img src="img/wing_bn02.jpg" style="margin-top:10px;" />
-	</div>
-</div>
-</body>
+            //----------메인 이미지 슬라이드(jwSlide) -----------//
+            $(function () {
+              slide.start();
+            });
+          </script>
+          <div class="title">
+            <h1>시설보기</h1>
+            <div class="navi"><img src="http://img.justfit-fitness.com/icon_home.jpg" alt="홈"/><img src="http://img.justfit-fitness.com/icon_arrow.jpg" alt="&gt;"/>JUST FIT<img src="http://img.justfit-fitness.com/icon_arrow.jpg" alt="&gt;"/>시설보기</div>
+            <div id="content-area">
+              <div class="subF">
+                <!----// jwSlide start //-------------------------------------->
+                <table id="jwSlide_wrap" onmouseover="javascript:slide.img_over('over');" onmouseout="javascript:slide.img_over('out');">
+                  <tr>
+                    <td>
+                      <div id="jwSlide_left" class="jwSlide_btn">
+                        <a href="javascript:slide.prev();" class="btn_link"><img src="http://img.justfit-fitness.com/photo/slide_btn_left.jpg?ver=150212092904" class="btn" alt="이전" onmouseover="javascript:slide.btn_over('prev');" onmouseout="javascript:slide.btn_over('off');"/></a>
+                      </div>
+                      <!--jwSlide_left-->
+                      <div id="jwSlide_center">
+                        <div id="jwSlide_view" class="jwSlide_center" style="position:relative; width:620px; height:384px; padding:0px; ">
+                          <img id="img_view" src="" alt=""/>
+                          <div id="jwSlide_title_bg" class="view_title"></div>
+                          <div id="jwSlide_title" class="view_title">
+                            <span id="jwSlide_title_text" style="float:left; margin-left:10px;"></span>
+                            <span id="jwSlide_title_no" style="float:right; margin-right:10px;"></span>
+                          </div>
+                        </div>
+                        <!--jwSlide_view-->
+                        <table id="jwSlide_navi" class="jwSlide_center" cellspacing="0px" cellpadding="0px">
+                          <tr id="jwSlide_navi_thumb"></tr>
+                          <tr id="jwSlide_navi_text"></tr>
+                          <tr id="jwSlide_navi_icon"></tr>
+                        </table>
+                        <!--jwSlide_navi-->
+                      </div>
+                      <!--jwSlide_center-->
+                      <div id="jwSlide_right" class="jwSlide_btn">
+                        <a href="javascript:slide.next();" class="btn_link"><img src="http://img.justfit-fitness.com/photo/slide_btn_right.jpg?ver=150212092904" class="btn" alt="다음" onmouseover="javascript:slide.btn_over('next');" onmouseout="javascript:slide.btn_over('off');"/></a>
+                      </div>
+                      <!--jwSlide_right-->
+                    </td>
+                  </tr>
+                </table>
+                <!--jwSlide_wrap-->
+                <!----// jwSlide end //-------------------------------------------->
+              </div>
+              <!-- 갤러리 끝 -->
+              <div class="subF">
+                <h3>부대시설</h3>
+                <div id="etc_box">
+                  <div class="etc_box_left">
+                    <h4>넓은 주차장 확보</h4>
+                    <p>차량 진출입을 원활하게 유도하는 첨단 주차시스템을 갖춘 주차타워 설계와 자주식 주차로<br>편리한 주차를 약속합니다.</p>
+                    <span>- 차량번호 인식 주차관제 시스템<br>- 주차타워 66대/자주식 주차 14대(장애인주차 2대포함)<br></span></div>
+                  <div class="etc_box_right"><img src="http://img.justfit-fitness.com/etc_01.jpg"></div>
+                </div>
+                <div id="etc_box">
+                  <div class="etc_box_left">
+                    <h4>CCTV 시스템</h4>
+                    <p>엘리베이터, 주차장, 현관 등 모노팰리스 내설치된 고화질 CCTV로 범죄 및 안전시스템을 강화합니다.</p>
+                    <span>- 엘레베이터, 주차장, 현관, 복도 CCTV 설치</span></div>
+                  <div class="etc_box_right"><img src="http://img.justfit-fitness.com/etc_02.jpg"></div>
+                </div>
+                <div id="etc_box">
+                  <div class="etc_box_left">
+                    <h4>교통 안내</h4>
+                    <p>아산 중심부에 위치하고 있으며, 지하철 1호선 온양온천역 하차 (1번출구)후 도보 7분거리
+                    </br>시외버스터미널 도보 10분거리, 광역,간선버스노선 등 버스환승이 편리한 대중교통망으로 이루워져 있습니다.</p>
+                </br>
+                <span>- 인근 지하철역 : 온양온천역, 배방역, 신창역, 천안아산역, 천안역, 봉명역, 쌍용역, 아산역<br>- 인근 버스터미널 : 아산시외버스터미널, 아산고속버스터미널<br>
+                </div>
+                <div class="etc_box_right"><img src="http://img.justfit-fitness.com/etc_03.jpg"></div>
+              </div>
+              <div id="etc_box">
+                <div class="etc_box_left">
+                  <h4>24시간 편의점</h4>
+                  <p>1층에 위치하고 있는 편의점은 다양하고 풍부한 상품을 갖추고 입주자의 편리를 위하여 24시간 영업하고 있습니다. 입주자께서 모노팰리스를 이용하시는 동안 필요하신 간단한 식재료,생활용품, 음료, 현금서비스 등을 바로 모노팰리스 건물내에서 해결하실 수 있습니다.</p>
+                </div>
+                <div class="etc_box_right"><img src="http://img.justfit-fitness.com/etc_04.jpg"></div>
+              </div>
+              <div id="etc_box" style="MARGIN-BOTTOM: 100px">
+                <div class="etc_box_left">
+                  <h4>시카고 리얼 바베큐&백반</h4>
+                  <p>1층에 위치하고 있는 시카고 리얼 바베큐&백반은 기존의 기름으로 튀겨지는 치킨에서 벗어나<br>에어프라이어를 이용해 기름없이 공기로 튀기는 치킨으로 맛과 건강을 동시에 생각하는
+                    <br>착한 치킨입니다. 또한 저렴한 가격으로 아침/점심 영양만점 착한백반을 단돈 3,500원에
+                  </div>
+                  <div class="etc_box_right"><img src="http://img.justfit-fitness.com/etc_05.jpg"></div>
+                </div>
+              </div>
+            </div>
+            <!-- content-area 끝-->
+          </div>
+          <!-- title 끝-->
+        </div>
+        <!-- contents 끝-->
+      </div>
+      <!-- container 끝-->
+      <div id="footer">
+        <div id="f_contents">
+          <h2><img src="http://img.justfit-fitness.com/footer_logo.jpg"/></h2>
+          <p class="address">
+            <span class="tel">서울 강남구 테헤란로 82길 15 (디아이타워 지하 1층 저스트핏)&nbsp;&nbsp;| &nbsp;상담문의:
+              <font class="red">070-4102-6476</font>
+              <a href="map.html" title="오시는길"><img src="http://img.justfit-fitness.com/footer_bt.jpg" style="margin-top:-2px;margin-left:5px"></a><br>서울 강남구 대치동 942-15 디아이타워 지하 1층 저스트핏</span><br>
+            <br>COPYRIGHT 2017 BY JUST FIT CO.,LTD ALL RIGHTS RESERVED.<br><br>
+          </p>
+        </div>
+        <!--f_contents 끝-->
+      </div>
+      <!--footer 끝-->
+    </div>
+    <!--wrapper 끝-->
+    <!-- 배너 -->
+    <div style="position:fixed; left:50%; top:300px; width:0px; height:0px;">
+      <div style="position:relative; left:530px; width:0px; height:0px;">
+        <a href="#"><img src="http://img.justfit-fitness.com/wing_bn01.gif"/></a>
+        <img src="http://img.justfit-fitness.com/wing_bn02.jpg" style="margin-top:10px;"/>
+      </div>
+    </div>
+  </body>
 </html>
